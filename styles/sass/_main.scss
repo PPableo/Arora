@@ -14,23 +14,34 @@ main {
     width: 30%;
     height: auto;
     img {
-        width: 100%;
+      width: 100%;
     }
   }
   .about-text {
     width: 70%;
     // line-height: ;
     h2 {
+      font-weight: 300;
       text-transform: uppercase;
-      margin-bottom: 1rem;
-      font-size: 1.5;
+      margin-bottom: 3%;
+      font-size: 2.5rem;
 
       // margin: ;
     }
     p {
-      margin-bottom: 1rem;
+      margin-bottom: 3%;
     }
     button {
+      color: $white;
+      background-color: #14171f;
+    //   line-height: 2.9rem;
+      text-decoration: none;
+      border: 1px solid #faba63;
+    //   width: 160px;
+      padding: 0.5rem;
+      font-size: 2rem;
+      font-family: $baseFont;
+      text-transform: uppercase;
     }
   }
 }

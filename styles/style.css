@@ -365,13 +365,25 @@ main #about {
   width: 70%;
 }
 .about .about-text h2 {
+  font-weight: 300;
   text-transform: uppercase;
-  margin-bottom: 1rem;
-  font-size: 1.5;
+  margin-bottom: 3%;
+  font-size: 2.5rem;
 }
 .about .about-text p {
-  margin-bottom: 1rem;
+  margin-bottom: 3%;
 }
+.about .about-text button {
+  color: #FFF;
+  background-color: #14171f;
+  text-decoration: none;
+  border: 1px solid #faba63;
+  padding: 0.5rem;
+  font-size: 2rem;
+  font-family: "Italiana", serif;
+  text-transform: uppercase;
+}
+
 .wrapper {
   max-width: 1200px;
   width: 90%;
