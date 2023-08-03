@@ -8,40 +8,150 @@ main {
 
 .about {
   display: flex;
-  gap: 2rem;
-  padding: 2rem 2rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 0rem;
+
   .about-img {
     width: 30%;
-    height: auto;
-    img {
-      width: 100%;
-    }
-  }
-  .about-text {
-    width: 70%;
-    // line-height: ;
-    h2 {
-      font-weight: 300;
-      text-transform: uppercase;
-      margin-bottom: 3%;
-      font-size: 2.5rem;
 
-      // margin: ;
-    }
-    p {
-      margin-bottom: 3%;
-    }
-    button {
-      color: $white;
-      background-color: #14171f;
-    //   line-height: 2.9rem;
-      text-decoration: none;
-      border: 1px solid #faba63;
-    //   width: 160px;
-      padding: 0.5rem;
-      font-size: 2rem;
-      font-family: $baseFont;
-      text-transform: uppercase;
+    img {
+      max-width: 100%;
+      height: auto;
     }
   }
+}
+
+.about-text {
+  font-size: 1.5rem;
+  width: 65%;
+
+  h2 {
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 3%;
+  }
+
+  p {
+    margin-bottom: 3%;
+    font-size: 100%;
+    font-family: $spice;
+    line-height: 2rem;
+    font-weight: 300;
+  }
+
+  button {
+    @include aro-button;
+  }
+}
+
+#collection {
+  display: flex;
+  justify-content: center; /* Center the flex items horizontally */
+  align-items: center; /* Center the flex items vertically */
+  height: 40vh;
+  .wrapper {
+    p {
+      text-align: center;
+      font-size: 3rem;
+      padding: 3rem 0rem;
+    }
+    .img-collection {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2vh;
+      img {
+        max-width: 30%;
+        height: auto;
+      }
+    }
+  }
+}
+
+#page-break {
+  background-color: $secondary;
+
+  .wrapper {
+    height: 15vh;
+    display: flex;
+    justify-content: space-evenly; /* Center the flex items horizontally */
+    align-items: center; /* Center the flex items vertically */
+
+    a {
+      font-size: 2rem;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      i {
+        padding: 0.5rem 0rem;
+        font-size: 3rem;
+        color: $details;
+      }
+    }
+  }
+}
+
+#promo {
+  .top-row,
+  .bottom-row {
+    display: flex;
+    align-items: center;
+    height: 50%;
+
+    .row-text1,
+    .row-text2 {
+      font-size: 1.5rem;
+      max-width: 50%;
+      padding-left: 10%;
+      padding-right: 10%;
+
+      h2 {
+        margin-bottom: 5%;
+        font-weight: 300;
+        text-transform: uppercase;
+      }
+
+      p {
+        margin-bottom: 5%;
+        font-size: 100%;
+        font-family: $spice;
+        line-height: 2rem;
+        font-weight: 300;
+      }
+
+      button {
+        @include aro-button;
+      }
+    }
+
+    .top-row-img,
+    .bottom-row-img {
+      width: 100%;
+      object-fit: cover;
+      height: 100%;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+      }
+    }
+  }
+}
+
+footer {
+  display: flex;
+}
+
+.navFooter .ul {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.navFooter,
+.formContainer1,
+.emailInput {
+    flex: 1;
 }
