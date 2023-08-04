@@ -1,0 +1,25 @@
+@use "./variables" as *;
+
+.wrapper {
+  max-width: 1200px;
+  // height: auto;
+  width: 90%;
+  margin: 0 auto;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $baseFont;
+  background-color: $primary;
+}
+
+h1, h2, p {
+    color: $white;
+    margin: 0;
+}
+// img {
+//     max-width: 100%;
+// }
