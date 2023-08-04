@@ -3,7 +3,7 @@
 $primary: #201e21;
 $secondary: #14171f;
 $details: #faba63;
-$white: #FFF;
+$white: #fff;
 
 /* ---------------------------- Text Style Catalog --------------------------- */
 
@@ -13,11 +13,15 @@ $spice: "Lato", sans-serif;
 /* --------------------------------- Mixins --------------------------------- */
 
 @mixin aro-button {
-    color: $white;
-    background-color: #14171f;
-    line-height: 2.9rem;
-    text-decoration: none;
-    border: 1px solid #faba63;
-    font-family: $baseFont;
-    text-transform: uppercase;
+  color: $white;
+  background-color: #14171f;
+  line-height: 2.9rem;
+  text-decoration: none;
+  border: 1px solid #faba63;
+  font-family: $baseFont;
+  text-transform: uppercase;
+  &:hover {
+    background-color: $details;
+    transition: .2s;
+  }
 }

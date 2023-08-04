@@ -43,12 +43,16 @@ nav {
     justify-content: flex-start;
     align-items: center;
     font-size: 2rem;
-    gap: 1.2rem;
+    gap: 3rem;
     li {
       list-style: none;
       a {
         color: $details;
         text-decoration: none;
+        text-transform: capitalize;
+      &:hover {
+        border-bottom: 1px $details solid;
+      }
       }
     }
   }

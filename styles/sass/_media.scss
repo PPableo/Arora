@@ -1,0 +1,75 @@
+@media (max-width: 767px) {
+  /* CSS styles specific to mobile devices */
+header {
+    height: 60vh;
+}
+
+  #about {
+    .about {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .about-img {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+      .about-text {
+        width: 100%;
+        text-align: center;
+        p {
+          text-align: left;
+        }
+      }
+    }
+  }
+
+#collection {
+    height: 30vh;
+}
+
+  #page-break {
+    .wrapper {
+      flex-direction: column;
+      height: 20vh;
+      padding: 2rem;
+    }
+  }
+
+  #promo {
+    .top-row {
+      flex-direction: column-reverse;
+      .row-text1 {
+        padding: 2rem;
+        max-width: 100%;
+        text-align: center;
+      }
+    }
+    .bottom-row {
+      flex-direction: column;
+      .row-text2 {
+        padding: 2rem;
+        max-width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+  #contact {
+    .wrapper {
+        flex-direction: column;
+        .footer-menu {
+            ul {
+                display: flex;
+                gap: 2rem;
+            }
+        }
+        .address {
+            font-weight: 500;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+    }
+  }
+
+}
