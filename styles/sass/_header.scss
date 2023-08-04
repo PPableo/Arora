@@ -32,6 +32,12 @@ header {
           }
     }
   }
+
+  .mobile-nav,
+  .mobile-menu, 
+  .bar {
+    display: none;
+  }
 }
 
 nav {

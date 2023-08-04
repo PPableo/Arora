@@ -1,8 +1,95 @@
+@use "./variables" as *;
+
 @media (max-width: 767px) {
   /* CSS styles specific to mobile devices */
-header {
+  header {
     height: 60vh;
-}
+    
+    .menu {
+      display: none;
+    }
+
+    .mobile-menu {
+      z-index: 152;
+      left: 90%;
+      position: relative;
+      display: block;
+      width: 3.5rem;
+      cursor: pointer;
+      appearance: none;
+      background: none;
+      border: none;
+      outline: none;
+
+      &::after,
+      &::before,
+      .bar {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 0.3rem;
+        background-color: #fff;
+        margin: 0.6rem 0rem;
+        transition: 0.4s;
+      }
+      &.is-active {
+        &::before {
+          transform: rotate(-45deg) translate(-7px, 5px);
+        }
+
+        &::after {
+          transform: rotate(45deg) translate(-8px, -6px);
+        }
+
+        .bar {
+          opacity: 0;
+        }
+
+      }
+    }
+    
+    .mobile-nav {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 100%;
+      width: 100%;
+      min-height: 100vh;
+      z-index: 99;
+      background-color: $primary;
+      padding-top: 12rem;
+      transition: 0.4s;
+  
+      &.is-active {
+        left: 0;
+      }
+  
+      a {
+        font-size: 1.8rem;
+        letter-spacing: .3rem;
+        font-weight: 500;
+        color: $details;
+        text-decoration: none;
+        text-transform: uppercase;
+        display: block;
+        width: 100%;
+        max-width: 20rem;
+        margin: 0 auto 1.6rem;
+        text-align: center;
+        margin-bottom: 1.6rem;
+        padding: 1.2rem 1.6rem;
+        background-color: $secondary;
+  
+        &:hover {
+          background-color: $white;
+          color: $primary;
+        }
+      }
+    }
+  }
+
+
+
 
   #about {
     .about {
@@ -24,19 +111,20 @@ header {
     }
   }
 
-#collection {
+  #collection {
     height: 30vh;
-}
+  }
 
   #page-break {
     .wrapper {
       flex-direction: column;
-      height: 20vh;
+      height: 30vh;
       padding: 2rem;
     }
   }
 
   #promo {
+    padding: 2rem;
     .top-row {
       flex-direction: column-reverse;
       .row-text1 {
@@ -57,19 +145,19 @@ header {
 
   #contact {
     .wrapper {
-        flex-direction: column;
-        .footer-menu {
-            ul {
-                display: flex;
-                gap: 2rem;
-            }
+      height: 40vh;
+      flex-direction: column;
+      .footer-menu {
+        ul {
+          display: flex;
+          gap: 2rem;
         }
-        .address {
-            font-weight: 500;
-            font-size: 1.5rem;
-            text-align: center;
-        }
+      }
+      .address {
+        font-weight: 500;
+        font-size: 1.5rem;
+        text-align: center;
+      }
     }
   }
-
 }
