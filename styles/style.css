@@ -692,6 +692,11 @@ header .logo .brand .details {
   top: 155%;
   left: 22%;
 }
+header .mobile-nav,
+header .mobile-menu,
+header .bar {
+  display: none;
+}
 
 nav ul {
   font-family: "Lato", sans-serif;
@@ -954,6 +959,81 @@ html {
   header {
     height: 60vh;
   }
+  header .menu {
+    display: none;
+  }
+  header .mobile-menu {
+    z-index: 152;
+    left: 90%;
+    position: relative;
+    display: block;
+    width: 3.5rem;
+    cursor: pointer;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background: none;
+    border: none;
+    outline: none;
+  }
+  header .mobile-menu::after, header .mobile-menu::before,
+  header .mobile-menu .bar {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0.3rem;
+    background-color: #fff;
+    margin: 0.6rem 0rem;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  header .mobile-menu.is-active::before {
+    -webkit-transform: rotate(-45deg) translate(-7px, 5px);
+            transform: rotate(-45deg) translate(-7px, 5px);
+  }
+  header .mobile-menu.is-active::after {
+    -webkit-transform: rotate(45deg) translate(-8px, -6px);
+            transform: rotate(45deg) translate(-8px, -6px);
+  }
+  header .mobile-menu.is-active .bar {
+    opacity: 0;
+  }
+  header .mobile-nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 99;
+    background-color: #201e21;
+    padding-top: 12rem;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  header .mobile-nav.is-active {
+    left: 0;
+  }
+  header .mobile-nav a {
+    font-size: 1.8rem;
+    letter-spacing: 0.3rem;
+    font-weight: 500;
+    color: #faba63;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    max-width: 20rem;
+    margin: 0 auto 1.6rem;
+    text-align: center;
+    margin-bottom: 1.6rem;
+    padding: 1.2rem 1.6rem;
+    background-color: #14171f;
+  }
+  header .mobile-nav a:hover {
+    background-color: #fff;
+    color: #201e21;
+  }
   #about .about {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -988,7 +1068,10 @@ html {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 20vh;
+    height: 30vh;
+    padding: 2rem;
+  }
+  #promo {
     padding: 2rem;
   }
   #promo .top-row {
@@ -1014,6 +1097,7 @@ html {
     text-align: center;
   }
   #contact .wrapper {
+    height: 40vh;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
